@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PizzasAppleWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Bienvenidos a Pizzeria" textAlignment="center" id="T8O-Gj-A5g">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label alignment="center" text="&quot; La Unica &quot;" textAlignment="center" id="TUb-xg-tHU">
+                            <fontDescription key="font" type="boldSystem" pointSize="15"/>
+                        </label>
+                        <button width="120" height="30" alignment="center" verticalAlignment="bottom" title="¡ elegir pizza !" id="aYf-XM-USM">
+                            <color key="titleColor" red="0.0" green="0.41364303689999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                            <connections>
+                                <segue destination="G5o-Y6-X0m" kind="push" id="RIG-eE-qWV"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="382" y="34"/>
+        </scene>
+        <!--pantalla_tam-->
+        <scene sceneID="UCf-lp-D2R">
+            <objects>
+                <controller identifier="pantalla_tam" id="G5o-Y6-X0m" customClass="InterfaceControllerTam" customModule="PizzasAppleWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="¿Que TAMAÑO necesitas?" id="jAo-7s-PUK">
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
+                        <picker height="73" alignment="center" verticalAlignment="center" indicatorMode="shownWhileFocused" id="cs4-cO-RlD">
+                            <connections>
+                                <action selector="pickerSelTam:" destination="G5o-Y6-X0m" id="TDw-mQ-Xx5"/>
+                            </connections>
+                        </picker>
+                        <button width="120" height="30" alignment="center" verticalAlignment="bottom" title="continuar..." id="Wfp-P3-ot3">
+                            <color key="titleColor" red="0.0" green="0.41364303689999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                            <connections>
+                                <action selector="btnContinuarTam" destination="G5o-Y6-X0m" id="bpZ-Vm-fAz"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="btnContinuar" destination="Wfp-P3-ot3" id="86o-EB-BW8"/>
+                        <outlet property="itemPicker" destination="cs4-cO-RlD" id="I0o-lP-KQJ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="399" y="310"/>
+        </scene>
+        <!--pantalla_masa-->
+        <scene sceneID="Bzf-WN-19S">
+            <objects>
+                <controller identifier="pantalla_masa" id="GgO-kA-Ks0" customClass="InterfaceControllerMasa" customModule="PizzasAppleWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="¿Que tipo de MASA?" id="I2d-AA-qJz">
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
+                        <picker height="73" alignment="center" verticalAlignment="center" indicatorMode="shownWhileFocused" id="YJL-ux-rX2">
+                            <connections>
+                                <action selector="pickerSelMasa:" destination="GgO-kA-Ks0" id="GfT-7G-XHz"/>
+                            </connections>
+                        </picker>
+                        <button width="120" height="30" alignment="center" verticalAlignment="bottom" title="continuar..." id="n8Q-TG-JDj">
+                            <color key="titleColor" red="0.0" green="0.41364303689999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                            <connections>
+                                <action selector="btnContinuarMasa" destination="GgO-kA-Ks0" id="rhG-ZO-xwi"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="btnContinuar" destination="n8Q-TG-JDj" id="ccQ-Kx-b0h"/>
+                        <outlet property="itemPicker" destination="YJL-ux-rX2" id="I5b-x9-KA6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="399" y="584"/>
+        </scene>
+        <!--pantalla_queso-->
+        <scene sceneID="aUY-j9-T0T">
+            <objects>
+                <controller identifier="pantalla_queso" id="7ec-wP-qb9" customClass="InterfaceControllerQueso" customModule="PizzasAppleWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="¿Que tipo de QUESO?" id="52u-Dk-Tox">
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
+                        <picker height="73" alignment="center" verticalAlignment="center" indicatorMode="shownWhileFocused" id="6LS-y5-xse">
+                            <connections>
+                                <action selector="pickerSelQueso:" destination="7ec-wP-qb9" id="I3T-kV-fYd"/>
+                            </connections>
+                        </picker>
+                        <button width="120" height="30" alignment="center" verticalAlignment="bottom" title="continuar..." id="xMx-ST-i6p">
+                            <color key="titleColor" red="0.0" green="0.41364303689999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                            <connections>
+                                <action selector="btnContinuarQueso" destination="7ec-wP-qb9" id="eJf-R0-QQf"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="btnContinuar" destination="xMx-ST-i6p" id="QOg-Gs-0wS"/>
+                        <outlet property="itemPicker" destination="6LS-y5-xse" id="xS7-3A-3iQ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="399" y="870"/>
+        </scene>
+        <!--pantalla_ingredientes-->
+        <scene sceneID="9Dj-CR-HnB">
+            <objects>
+                <controller identifier="pantalla_ingredientes" id="XgU-mk-NKl" customClass="InterfaceControllerIngredientes" customModule="PizzasAppleWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Elige de 1 a 5 Ingredientes" id="PWj-Vl-5dE">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <button width="120" height="30" alignment="center" verticalAlignment="bottom" title="continuar..." id="qGr-Ys-XUX">
+                            <color key="titleColor" red="0.0" green="0.41364303689999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                            <connections>
+                                <action selector="btnContinuarIngredientes" destination="XgU-mk-NKl" id="b4z-iI-RXW"/>
+                            </connections>
+                        </button>
+                        <group alignment="center" verticalAlignment="center" contentMode="center" animationDuration="1" layout="vertical" id="kOu-wt-n9W">
+                            <items>
+                                <switch width="120" height="20" alignment="center" title="Aceitunas" id="CZJ-Q5-waG">
+                                    <fontDescription key="font" type="system" pointSize="8"/>
+                                    <connections>
+                                        <action selector="StateAceitunas:" destination="XgU-mk-NKl" id="jUV-ED-R4d"/>
+                                    </connections>
+                                </switch>
+                                <switch width="120" height="20" alignment="center" title="Anchoas" id="zZY-IA-Efq">
+                                    <fontDescription key="font" type="system" pointSize="8"/>
+                                    <connections>
+                                        <action selector="StateAnchoas:" destination="XgU-mk-NKl" id="8qY-bO-dNZ"/>
+                                    </connections>
+                                </switch>
+                                <switch width="120" height="20" alignment="center" title="Cebolla" id="JLy-d4-m6W">
+                                    <fontDescription key="font" type="system" pointSize="8"/>
+                                    <connections>
+                                        <action selector="StateCebolla:" destination="XgU-mk-NKl" id="cbv-gW-huL"/>
+                                    </connections>
+                                </switch>
+                                <switch width="120" height="20" alignment="center" title="Jamon" id="4cH-IG-2fB">
+                                    <fontDescription key="font" type="system" pointSize="8"/>
+                                    <connections>
+                                        <action selector="StateJamon:" destination="XgU-mk-NKl" id="LEv-0f-wmx"/>
+                                    </connections>
+                                </switch>
+                                <switch width="120" height="20" alignment="center" title="Pavo" id="cYm-IQ-S13">
+                                    <fontDescription key="font" type="system" pointSize="8"/>
+                                    <connections>
+                                        <action selector="StatePavo:" destination="XgU-mk-NKl" id="u0B-ol-NK3"/>
+                                    </connections>
+                                </switch>
+                                <switch width="120" height="20" alignment="center" title="Pepperoni" id="odH-qM-kjL">
+                                    <fontDescription key="font" type="system" pointSize="8"/>
+                                    <connections>
+                                        <action selector="StatePepperoni:" destination="XgU-mk-NKl" id="ilI-Lu-hpQ"/>
+                                    </connections>
+                                </switch>
+                                <switch width="120" height="20" alignment="center" title="Salami" id="ZFh-vz-FnW">
+                                    <fontDescription key="font" type="system" pointSize="8"/>
+                                    <connections>
+                                        <action selector="StateSalami:" destination="XgU-mk-NKl" id="9PS-aN-3TX"/>
+                                    </connections>
+                                </switch>
+                                <switch width="120" height="20" alignment="center" title="Salchicha" id="b7Y-6P-vAn">
+                                    <fontDescription key="font" type="system" pointSize="8"/>
+                                    <connections>
+                                        <action selector="StateSalchicha:" destination="XgU-mk-NKl" id="ynN-PX-PGx"/>
+                                    </connections>
+                                </switch>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="btnContinuar" destination="qGr-Ys-XUX" id="V4D-kb-KRl"/>
+                        <outlet property="chkAceituna" destination="CZJ-Q5-waG" id="0TU-fV-RYk"/>
+                        <outlet property="chkAnchoa" destination="zZY-IA-Efq" id="hqW-mV-DMS"/>
+                        <outlet property="chkCebolla" destination="JLy-d4-m6W" id="B9e-bU-Vh1"/>
+                        <outlet property="chkJamon" destination="4cH-IG-2fB" id="dYc-yA-e2e"/>
+                        <outlet property="chkPavo" destination="cYm-IQ-S13" id="OwV-2g-L7J"/>
+                        <outlet property="chkPepperoni" destination="odH-qM-kjL" id="I5e-fO-wGm"/>
+                        <outlet property="chkSalami" destination="ZFh-vz-FnW" id="0IN-zW-lnc"/>
+                        <outlet property="chkSalchicha" destination="b7Y-6P-vAn" id="zaU-uV-lTH"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="399" y="1191.5"/>
+        </scene>
+        <!--pantalla_confirmacion-->
+        <scene sceneID="29Y-Wu-Lcc">
+            <objects>
+                <controller identifier="pantalla_confirmacion" id="eVb-AK-CJb" customClass="InterfaceControllerConfirmacion" customModule="PizzasAppleWatch_WatchKit_Extension">
+                    <items>
+                        <label width="1" height="110" alignment="center" verticalAlignment="center" numberOfLines="4" id="DXa-Ou-WlM">
+                            <fontDescription key="font" type="system" pointSize="7"/>
+                        </label>
+                        <button width="120" height="30" alignment="center" verticalAlignment="bottom" title="¿ confirmar pedido ?" id="Nzx-wc-LBE">
+                            <color key="titleColor" red="0.0" green="0.41364303689999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                            <connections>
+                                <action selector="btnContinuarIngredientes" destination="XgU-mk-NKl" id="YYl-A2-Tab"/>
+                                <segue destination="EoD-6d-iNG" kind="push" id="2Kw-0F-LRo"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="btnConfirmar" destination="Nzx-wc-LBE" id="ga8-PG-NKS"/>
+                        <outlet property="labIngredientes" destination="DXa-Ou-WlM" id="93h-0l-09F"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="410" y="1510"/>
+        </scene>
+        <!--Interface Controller Final-->
+        <scene sceneID="dml-7s-lqy">
+            <objects>
+                <controller id="EoD-6d-iNG" customClass="InterfaceControllerFinal" customModule="PizzasAppleWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="¡ LISTO !" textAlignment="justified" id="YDD-cC-ATn">
+                            <fontDescription key="font" type="boldSystem" pointSize="11"/>
+                        </label>
+                        <label height="54.5" alignment="center" verticalAlignment="center" text="El pedido llegará antes de 30 minutos o será gratis." textAlignment="center" numberOfLines="2" id="OXW-WJ-quN">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <label alignment="center" verticalAlignment="bottom" text="¡ GRACIAS POR SU COMPRA !" textAlignment="justified" id="2QZ-82-HZ9">
+                            <fontDescription key="font" type="boldSystem" pointSize="9"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="411" y="1780"/>
+        </scene>
+    </scenes>
+</document>
